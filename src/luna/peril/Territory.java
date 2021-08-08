@@ -1,6 +1,6 @@
 package luna.peril;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p></p>
@@ -10,29 +10,28 @@ import java.util.ArrayList;
  */
 public class Territory
 {
-	private final int    ID;
-	private final String NAME;
+	private final int           ID;
+	private final String        NAME;
+	private final List<Integer> adjacentTerritories;
 	
 	private int owner;
 	private int troopCount;
 	
-	private final ArrayList<Integer> adjacentTerritories;
-	
 	/**
 	 * <p>Initializes a territory.</p>
 	 *
-	 * @param ID   The territory ID
-	 * @param Name The name of the territory
+	 * @param id   The territory ID
+	 * @param name The name of the territory
 	 */
-	public Territory(int ID, String Name)
+	public Territory(int id, String name, List<Integer> adjacents)
 	{
-		this.ID = ID;
-		this.NAME = Name;
+		this.ID = id;
+		this.NAME = name;
 		
 		owner = -1;
 		troopCount = 0;
 		
-		adjacentTerritories = new ArrayList<>();
+		adjacentTerritories = adjacents;
 	}
 	
 	/**
@@ -101,6 +100,16 @@ public class Territory
 	}
 	
 	/**
+	 * <p>Gets the troop count.</p>
+	 *
+	 * @return Troop count
+	 */
+	public int getTroopCount()
+	{
+		return troopCount;
+	}
+	
+	/**
 	 * <p>Add the ID's of adjacent territories</p>
 	 *
 	 * @param territoryId The adjacent territory's ID
@@ -125,7 +134,7 @@ public class Territory
 	 *
 	 * @return Array List of territory IDs
 	 */
-	public ArrayList<Integer> getAdjacentTerritories()
+	public List<Integer> getAdjacentTerritories()
 	{
 		return adjacentTerritories;
 	}
