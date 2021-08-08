@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class MainRunner extends JPanel
 {
-	public Map map = new Map();
+//	public Map map = new Map();
 	
 	MainRunner()
 	{
@@ -61,6 +61,7 @@ public class MainRunner extends JPanel
 		g.fillPolygon(xpoints, ypoints, npoints); //Venezuela Example
 	}
 	
+	/*
 	public class Map
 	{
 		ArrayList<Territory> territories = new ArrayList<>();
@@ -76,4 +77,6 @@ public class MainRunner extends JPanel
 		
 		
 	}
+	
+	 */
 }
