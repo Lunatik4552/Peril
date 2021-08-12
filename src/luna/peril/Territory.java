@@ -49,7 +49,7 @@ public class Territory
 	 *
 	 * @return Territory Name
 	 */
-	public String getNAME()
+	public String getName()
 	{
 		return NAME;
 	}
